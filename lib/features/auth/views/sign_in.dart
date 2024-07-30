@@ -35,15 +35,74 @@ class _SignInState extends State<SignIn> {
                   )),
               child: Column(
                 children: [
-                  Align(
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 10),
                     alignment: Alignment.centerLeft,
-                      child: Text(
-                    "Sign In",
-                    style: TextStyle(
-                      color: titleColor,
-                      fontSize: 24,
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                        color: titleColor,
+                        fontSize: 24,
+                      ),
                     ),
-                  ))
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular((4)),
+                            borderSide: BorderSide(color: borderColor)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: "Password",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular((4)),
+                            borderSide: BorderSide(color: borderColor)),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      color: buttonColor,
+                      minWidth: double.infinity,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: containerColor,
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerRight,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 5,
+                    ),
+                    child: TextButton(
+                      child: Text(
+                        "Forgot Password ?",
+                        style: TextStyle(color: titleColor),
+                      ),
+                      onPressed: () {},
+                    ),
+                  )
                 ],
               ),
             ),
