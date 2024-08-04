@@ -91,16 +91,44 @@ class _SignInState extends State<SignIn> {
                     ),
                   ),
                   Container(
-                    alignment: Alignment.centerRight,
+                    alignment: Alignment.centerLeft,
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
                     ),
-                    child: TextButton(
+                    child: GestureDetector(
                       child: Text(
                         "Forgot Password ?",
-                        style: TextStyle(color: titleColor),
+                        style: TextStyle(
+                          color: textButtonTextColor,
+                          fontSize: 14,
+                        ),
                       ),
-                      onPressed: () {},
+                      onTap: () {},
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center ,
+                      children: [
+                        Text(
+                          "Don't haven't an account ? ",
+                          style: TextStyle(
+                            color: buttonColor,
+                            fontSize: 12,
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              color: buttonColor,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   )
                 ],
